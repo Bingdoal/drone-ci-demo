@@ -8,6 +8,7 @@ steps:
   commands:
     - go test
     - env GOOS=linux GOARCH=arm go build
+    - ./drone-demo
 
 trigger:
   branch:
@@ -15,4 +16,4 @@ trigger:
   event:
   - push
   ref:
-  - refs/tags/*
+  - refs/tags/**
