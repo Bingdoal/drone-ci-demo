@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: drone-demo
+
+steps:
+- name: test-and-build-golang
+  image: golang
+  commands:
+    - go test
+    - env GOOS=linux GOARCH=arm go build
