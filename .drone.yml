@@ -10,6 +10,8 @@ steps:
     - env GOOS=linux GOARCH=arm go build
     - ./drone-demo
 
+
 trigger:
-  event:
-  - tag
+  ref:
+    include:
+      - "refs/tags/v*"
