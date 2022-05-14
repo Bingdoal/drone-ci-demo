@@ -11,9 +11,5 @@ steps:
     - ./drone-demo
 
 trigger:
-  branch:
-  - main
   event:
-  - push
-  ref:
-  - refs/tags/**
+  - tag
