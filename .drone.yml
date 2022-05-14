@@ -8,3 +8,11 @@ steps:
   commands:
     - go test
     - env GOOS=linux GOARCH=arm go build
+
+trigger:
+  branch:
+  - main
+  event:
+  - push
+  ref:
+  - refs/tags/*
